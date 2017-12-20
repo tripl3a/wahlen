@@ -14,7 +14,7 @@ from collections import defaultdict
 ### set working directory
 
 from os import chdir
-chdir("/home/arndt/Documents/DSM/PythonDS/assignments")
+chdir("/home/arndt/git-reps/wahlen")
 
 ################
 # Assignment 3 #
@@ -325,3 +325,10 @@ dfVotesPerStateAndParty = dfVotesPerStateAndParty.sort_values(by=["party", "stat
 flat_seat_list = sum(list(map(lambda x: x[1], final_seat_assignment())), []) # flat seats list
 dfVotesPerStateAndParty = dfVotesPerStateAndParty.assign(dist_seats=flat_seat_list) # assign flat list of dist seats
 dfVotesPerStateAndParty.groupby(["party"]).sum() # check sum
+
+def get_final_distribution():
+    return dfVotesPerStateAndParty
+
+def get_direct_mandates():
+    return dfDirectMandates
+    
