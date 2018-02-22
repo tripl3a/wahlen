@@ -2,7 +2,7 @@
 
 This repository was created during my first semester in the Master's program Data Science at the Beuth University of Applied Sciences, Berlin as part of the course Practice of Data Science Programming. The main goal of this course was to learn the basics of Python.
 
-The example we worked on was the German Bundestag elections in 2017, where we reprogrammed the algorithms used to calculate the distribution of seats in the German Bundestag. We also practiced web scraping.
+The example we worked on was the German Bundestag elections in 2017, where we reprogrammed the algorithms used to calculate the distribution of seats in the German Bundestag. We also vizualized some data and practiced web scraping.
 
 ## Assignment 1
 
