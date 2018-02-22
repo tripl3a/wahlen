@@ -4,18 +4,6 @@ This repository was created during my first semester in the Master's program Dat
 
 The example we worked on was the German Bundestag elections in 2017, where we reprogrammed the algorithms used to calculate the distribution of seats in the German Bundestag. We also practiced web scraping.
 
-## Computation of Mindestsitzzahl
-
-For a given election result, each party in each state deserves a minimum number of seats (Mindestsitzzahl). Minimally, anybody obtaining the majority of first votes (Erststimmen) in each constituency is elected; this candidate has won a "direct seat" (Direktmandat). So number of seats for a party must be equal to or larger than the number of direct seats it won in a state.
-
-In addition, each party gets a number of seats based on their portion of second votes (Zweitstimmen). The mandates for these seats come from per-state per-party candidate lists (Listenplätze, list seats). Again, the ultimate number of seats for a party in a state must be larger than this share. Thus, the minimum number of seats is the maximum of the direct seats and the number of list seats.
-
-To compute the share of seat from second votes, the total amount of seats is distributed in two steps. In the first step, the seats are distributed by population count. In the second step, the seats are distributed to all eligible parties by second votes. A party is eligible if it has either 5% of the votes on the federal level, or three direct seats.
-
-Note: In the 2017 election, no party became eligible only by receiving three direct seats; all parties which met this condition also received 5% of the second votes.
-
-Note: Special consideration would be necessary if a candidate was elected for a direct seat who doesn't belong to a party, or whose party was not eligible for seats from the lists. This did not happen in the 2017 election, and thus does not need to be considered for the exercises.
-
 ## Assignment 1
 
 Compute the percentage of Zweitstimmen for each political party in the 2017 Bundestagswahlen, using ergebnisse.csv as your data source.
@@ -47,6 +35,18 @@ For this assignment, compute the Mindestsitzzahl for each party and each state. 
 1. Print out a list of states (by name) and parties with number of direct seats and list seats, as well as the number of seats by  which the direct seats are larger than the list seats (Überhangmandate) (0 if the number is not larger). Produce a CSV output of the form
 
 state;party;direct_seats;list_seats;ueberhang
+
+### Computation of Mindestsitzzahl
+
+For a given election result, each party in each state deserves a minimum number of seats (Mindestsitzzahl). Minimally, anybody obtaining the majority of first votes (Erststimmen) in each constituency is elected; this candidate has won a "direct seat" (Direktmandat). So number of seats for a party must be equal to or larger than the number of direct seats it won in a state.
+
+In addition, each party gets a number of seats based on their portion of second votes (Zweitstimmen). The mandates for these seats come from per-state per-party candidate lists (Listenplätze, list seats). Again, the ultimate number of seats for a party in a state must be larger than this share. Thus, the minimum number of seats is the maximum of the direct seats and the number of list seats.
+
+To compute the share of seat from second votes, the total amount of seats is distributed in two steps. In the first step, the seats are distributed by population count. In the second step, the seats are distributed to all eligible parties by second votes. A party is eligible if it has either 5% of the votes on the federal level, or three direct seats.
+
+Note: In the 2017 election, no party became eligible only by receiving three direct seats; all parties which met this condition also received 5% of the second votes.
+
+Note: Special consideration would be necessary if a candidate was elected for a direct seat who doesn't belong to a party, or whose party was not eligible for seats from the lists. This did not happen in the 2017 election, and thus does not need to be considered for the exercises.
 
 ## Assignment 4
 
